@@ -9,6 +9,8 @@
 - HarmBench refusals: **99% → 5.5%**.
 - The edit changes only **5.84 billion of 2.78 trillion parameters (0.21%)**; none of the 896 experts is touched.
 - Cost: about **$1,000** of GPU time over three research runs; repeating it takes one ~4-hour run (~$300).
+- Weights: [moeadham/Kimi-K3.1-Pro-abliterated](https://huggingface.co/moeadham/Kimi-K3.1-Pro-abliterated) on
+  Hugging Face.
 - If you're interested, you can try an abliterated Kimi K3.1 Pro
   [in the allmodels playground](https://allmodels.io/playground?model=moonshotai/kimi-k3.1-pro-abliterated).
 
@@ -411,7 +413,8 @@ and at temperature 1 over the three runs.
 - **Prompts derived from OBLITERATUS are AGPL-3.0** ([data/LICENSE-AGPL-3.0](data/LICENSE-AGPL-3.0)); the files that
   contain them are listed in [data/SOURCES.md](data/SOURCES.md).
 - **Alpaca-derived prompts and CMMLU are CC BY-NC 4.0** (non-commercial use only).
-- **Model weights:** the edited model is a derivative of Kimi K3.1 Pro under the Kimi K3.1-Pro License (Moonshot AI).
+- **Model weights** ([moeadham/Kimi-K3.1-Pro-abliterated](https://huggingface.co/moeadham/Kimi-K3.1-Pro-abliterated)):
+  a derivative of Kimi K3.1 Pro under the Kimi K3.1-Pro License (Moonshot AI).
 
 ## Repository map
 
