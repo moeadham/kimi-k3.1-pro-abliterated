@@ -1,0 +1,35 @@
+[project]
+name = "k3-harness"
+version = "0.0.1"
+description = "Measurement + directional-ablation harness for Kimi K3.1 Pro"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.6",
+    "safetensors>=0.4",
+    "numpy>=1.26",
+    "httpx>=0.27",
+]
+
+[project.entry-points."vllm.general_plugins"]
+k3h = "harness.vllm_plugin:register"
+
+[project.optional-dependencies]
+tok = [
+    "blobfile>=3.3.0",
+    "tiktoken>=0.14.0",
+    "transformers>=5.23.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.uv.build-backend]
+module-name = "harness"
+module-root = ""
+
+[build-system]
+requires = ["uv_build>=0.8,<0.13"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

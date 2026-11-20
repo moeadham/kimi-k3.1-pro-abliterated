@@ -1,0 +1,59 @@
+{
+ "rows": 300,
+ "jev_cost": 0.03520570199999999,
+ "jev_errors": 0,
+ "groups": [
+  {
+   "split": "control",
+   "lang": "en",
+   "cond": "wafer/us|max|T0.0",
+   "n": 30,
+   "censored": 0.1,
+   "refused>=.5": 0.033,
+   "deflected>=.5": 0.1,
+   "median_reasoning_tokens": 1496.5,
+   "onset_found": 2,
+   "median_onset_sentence": 0.0,
+   "median_onset_char": 0.0
+  },
+  {
+   "split": "control",
+   "lang": "en",
+   "cond": "wafer/us|max|T1.0",
+   "n": 120,
+   "censored": 0.025,
+   "refused>=.5": 0.008,
+   "deflected>=.5": 0.025,
+   "median_reasoning_tokens": 1417.0,
+   "onset_found": 3,
+   "median_onset_sentence": 0,
+   "median_onset_char": 0
+  },
+  {
+   "split": "control",
+   "lang": "zh",
+   "cond": "wafer/us|max|T0.0",
+   "n": 30,
+   "censored": 0.0,
+   "refused>=.5": 0.0,
+   "deflected>=.5": 0.0,
+   "median_reasoning_tokens": 1386.5,
+   "onset_found": 0,
+   "median_onset_sentence": null,
+   "median_onset_char": null
+  },
+  {
+   "split": "control",
+   "lang": "zh",
+   "cond": "wafer/us|max|T1.0",
+   "n": 120,
+   "censored": 0.092,
+   "refused>=.5": 0.058,
+   "deflected>=.5": 0.092,
+   "median_reasoning_tokens": 156.0,
+   "onset_found": 7,
+   "median_onset_sentence": 0,
+   "median_onset_char": 0
+  }
+ ]
+}

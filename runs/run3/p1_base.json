@@ -1,0 +1,81 @@
+{
+ "out": "/vol/session_r3/probe",
+ "sets": [
+  {
+   "tag": "wjb_dev",
+   "file": "data/refusal_v1/heldout_wjb_harmful.jsonl",
+   "split": "harmful",
+   "n": 150
+  },
+  {
+   "tag": "wjb_test",
+   "file": "data/refusal_v1/heldout_wjb_harmful.jsonl",
+   "split": "harmful",
+   "skip": 150,
+   "n": 400
+  },
+  {
+   "tag": "harmbench",
+   "file": "results/harmbench_standard/prompts.jsonl",
+   "split": "harmful"
+  },
+  {
+   "tag": "xstest",
+   "file": "results/xstest_safe/prompts.jsonl",
+   "split": "harmless"
+  },
+  {
+   "tag": "wjb_benign",
+   "file": "data/refusal_v1/heldout_wjb_benign.jsonl",
+   "split": "harmless"
+  },
+  {
+   "tag": "xs_dev",
+   "file": "results/xstest_safe/prompts.jsonl",
+   "split": "harmless",
+   "n": 100
+  }
+ ],
+ "tiers": {
+  "screen": [
+   "wjb_dev",
+   "xs_dev"
+  ],
+  "gate": [
+   "wjb_dev",
+   "wjb_test",
+   "harmbench",
+   "xstest",
+   "wjb_benign"
+  ]
+ },
+ "temperature": 0.0,
+ "effort": "low",
+ "kl_n": 200,
+ "kl_max_tokens": 1024,
+ "steps": [
+  {
+   "kind": "check"
+  },
+  {
+   "kind": "kl_reference",
+   "name": "kl_ref"
+  },
+  {
+   "kind": "baseline",
+   "name": "base_nt_gate",
+   "tier": "gate",
+   "thinking": false,
+   "max_tokens": 1024
+  },
+  {
+   "kind": "baseline",
+   "name": "base_think_gate",
+   "tier": "gate",
+   "thinking": true,
+   "effort": "low",
+   "max_tokens": 4096,
+   "panel": true
+  }
+ ]
+}

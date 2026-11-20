@@ -1,0 +1,112 @@
+{
+ "out": "/vol/session_r3/probe",
+ "sets": [
+  {
+   "tag": "wjb_dev",
+   "file": "data/refusal_v1/heldout_wjb_harmful.jsonl",
+   "split": "harmful",
+   "n": 150
+  },
+  {
+   "tag": "wjb_test",
+   "file": "data/refusal_v1/heldout_wjb_harmful.jsonl",
+   "split": "harmful",
+   "skip": 150,
+   "n": 400
+  },
+  {
+   "tag": "harmbench",
+   "file": "results/harmbench_standard/prompts.jsonl",
+   "split": "harmful"
+  },
+  {
+   "tag": "xstest",
+   "file": "results/xstest_safe/prompts.jsonl",
+   "split": "harmless"
+  },
+  {
+   "tag": "wjb_benign",
+   "file": "data/refusal_v1/heldout_wjb_benign.jsonl",
+   "split": "harmless"
+  },
+  {
+   "tag": "xs_dev",
+   "file": "results/xstest_safe/prompts.jsonl",
+   "split": "harmless",
+   "n": 100
+  }
+ ],
+ "tiers": {
+  "screen": [
+   "wjb_dev",
+   "xs_dev"
+  ],
+  "gate": [
+   "wjb_dev",
+   "wjb_test",
+   "harmbench",
+   "xstest",
+   "wjb_benign"
+  ]
+ },
+ "temperature": 0.0,
+ "effort": "low",
+ "kl_n": 200,
+ "kl_max_tokens": 1024,
+ "steps": [
+  {
+   "kind": "edit",
+   "name": "final_HR_l1.25_th",
+   "components": [
+    {
+     "bank": "/vol/banks/r3_h3.pt",
+     "family": "h3/6:1",
+     "variant": "pc4"
+    },
+    {
+     "bank": "/vol/banks/r3_r.pt",
+     "family": "r/6:1",
+     "variant": "pc4"
+    }
+   ],
+   "layers": [
+    48,
+    84
+   ],
+   "lam": 1.25,
+   "tier": "gate",
+   "thinking": true,
+   "max_tokens": 4096,
+   "compare_to": "base_think_gate",
+   "kl": true,
+   "effort": "low",
+   "panel": true
+  },
+  {
+   "kind": "edit",
+   "name": "final_HR_l1.25_nt",
+   "components": [
+    {
+     "bank": "/vol/banks/r3_h3.pt",
+     "family": "h3/6:1",
+     "variant": "pc4"
+    },
+    {
+     "bank": "/vol/banks/r3_r.pt",
+     "family": "r/6:1",
+     "variant": "pc4"
+    }
+   ],
+   "layers": [
+    48,
+    84
+   ],
+   "lam": 1.25,
+   "tier": "gate",
+   "thinking": false,
+   "max_tokens": 1024,
+   "compare_to": "base_nt_gate",
+   "kl": true
+  }
+ ]
+}

@@ -1,0 +1,484 @@
+{
+ "seed": 0,
+ "files": {
+  "build_harmful": {
+   "n": 4060,
+   "file": "build_harmful.jsonl",
+   "bytes": 2317249,
+   "sha256": "6a12f9538f8832cbc12ca4542597bf1591c6665c4a9fc31d50b2b05e03aa93a5",
+   "by_split": {
+    "harmful": 4060
+   },
+   "by_kind": {
+    "enriched_defensive": 227,
+    "enriched_fiction": 250,
+    "enriched_hypothetical": 250,
+    "enriched_professional": 273,
+    "residual_blackmarket": 100,
+    "residual_chemistry": 100,
+    "residual_exploit": 100,
+    "residual_revisionism": 100,
+    "residual_stereotype": 100,
+    "v1_pairs_obliteratus": 840,
+    "v1_pairs_semantic": 220,
+    "wjb_adversarial_harmful": 1000,
+    "wjb_vanilla_harmful": 500
+   },
+   "words_median": 20,
+   "words_median_by_kind": {
+    "enriched_defensive": 24,
+    "enriched_fiction": 22,
+    "enriched_hypothetical": 20,
+    "enriched_professional": 21,
+    "residual_blackmarket": 22,
+    "residual_chemistry": 112,
+    "residual_exploit": 24,
+    "residual_revisionism": 27,
+    "residual_stereotype": 22,
+    "v1_pairs_obliteratus": 11,
+    "v1_pairs_semantic": 12,
+    "wjb_adversarial_harmful": 135,
+    "wjb_vanilla_harmful": 16
+   },
+   "sources": [
+    "Bahushruth/abliteration-harmful-enriched@f29c0b778d3412d5cc7acfc9c6463ce13886212c",
+    "OBLITERATUS@e414902a68553538df92c9d2a99478ce954f56e9:obliteratus/prompts.py",
+    "allenai/wildjailbreak@5ddc12a7894f842b0619b8e1c7ee496b198af009:train",
+    "heretic-org/Semantic-Harmful@001ca2ceaef94a748235e0ba1366aee48436e286"
+   ],
+   "note": "row k's counterpart is build_harmless row k"
+  },
+  "build_harmless": {
+   "n": 4060,
+   "file": "build_harmless.jsonl",
+   "bytes": 2332525,
+   "sha256": "d721f12efd694ba1a34ceab3d7972d7e0f9f9a27f1404819fb080fcc1311e86d",
+   "by_split": {
+    "harmless": 4060
+   },
+   "by_kind": {
+    "enriched_defensive": 227,
+    "enriched_fiction": 250,
+    "enriched_hypothetical": 250,
+    "enriched_professional": 273,
+    "residual_blackmarket": 100,
+    "residual_chemistry": 100,
+    "residual_exploit": 100,
+    "residual_revisionism": 100,
+    "residual_stereotype": 100,
+    "v1_pairs_obliteratus": 840,
+    "v1_pairs_semantic": 220,
+    "wjb_adversarial_benign": 1000,
+    "wjb_vanilla_benign": 500
+   },
+   "words_median": 16,
+   "words_median_by_kind": {
+    "enriched_defensive": 18,
+    "enriched_fiction": 15,
+    "enriched_hypothetical": 15,
+    "enriched_professional": 15,
+    "residual_blackmarket": 20,
+    "residual_chemistry": 111,
+    "residual_exploit": 20,
+    "residual_revisionism": 18,
+    "residual_stereotype": 17,
+    "v1_pairs_obliteratus": 11,
+    "v1_pairs_semantic": 9,
+    "wjb_adversarial_benign": 134,
+    "wjb_vanilla_benign": 15
+   },
+   "sources": [
+    "OBLITERATUS@e414902a68553538df92c9d2a99478ce954f56e9:obliteratus/prompts.py",
+    "allenai/wildjailbreak@5ddc12a7894f842b0619b8e1c7ee496b198af009:train",
+    "heretic-org/Semantic-Harmful@001ca2ceaef94a748235e0ba1366aee48436e286"
+   ],
+   "note": "row k's counterpart is build_harmful row k"
+  },
+  "reference_harmless": {
+   "n": 2000,
+   "file": "reference_harmless.jsonl",
+   "bytes": 538324,
+   "sha256": "2a52566da72bcabbc3ada36876a8bae68d7b70255db85141e895173fa01a7657",
+   "by_split": {
+    "harmless": 2000
+   },
+   "by_kind": {
+    "obliteratus_harmless_pool": 1,
+    "semantic_unmatched_alpaca": 151,
+    "wjb_vanilla_benign_ordinary": 1848
+   },
+   "words_median": 11,
+   "words_median_by_kind": {
+    "obliteratus_harmless_pool": 8,
+    "semantic_unmatched_alpaca": 9,
+    "wjb_vanilla_benign_ordinary": 11
+   },
+   "sources": [
+    "OBLITERATUS@e414902a68553538df92c9d2a99478ce954f56e9:obliteratus/prompts.py:_HARMLESS_POOL",
+    "allenai/wildjailbreak@5ddc12a7894f842b0619b8e1c7ee496b198af009:train",
+    "heretic-org/Semantic-Harmful@001ca2ceaef94a748235e0ba1366aee48436e286"
+   ],
+   "note": "projection reference; not adversarial; see docs/refusal_v3_dataset.md for gaps"
+  }
+ },
+ "filters": {
+  "v1_pairs": {
+   "candidates": 1061,
+   "heldout_overlap": 1,
+   "kept": 1060
+  },
+  "wjb_vanilla_harmful": {
+   "candidates": 20000,
+   "v1_borderline": 137,
+   "heldout_overlap": 25,
+   "non_english": 47,
+   "kept_pool": 19791
+  },
+  "wjb_vanilla_benign": {
+   "candidates": 20000,
+   "v1_borderline": 146,
+   "non_english": 21,
+   "heldout_overlap": 50,
+   "kept_pool": 19783
+  },
+  "wjb_adversarial_harmful": {
+   "candidates": 20000,
+   "non_english": 562,
+   "v1_borderline": 91,
+   "heldout_overlap": 11,
+   "kept_pool": 19336
+  },
+  "wjb_adversarial_benign": {
+   "candidates": 20000,
+   "non_english": 410,
+   "v1_borderline": 108,
+   "heldout_overlap": 5,
+   "kept_pool": 19477
+  },
+  "enriched": {
+   "mlabonne_original": 520,
+   "jailbreak_style": 32,
+   "candidates": 6804,
+   "v1_borderline": 201,
+   "heldout_overlap": 3,
+   "non_english": 561,
+   "kept_pool": 6039,
+   "no_frame": 3008,
+   "selected_defensive": 227,
+   "selected_fiction": 250,
+   "selected_hypothetical": 250,
+   "selected_professional": 273
+  },
+  "theme_adversarial_harmful": {
+   "candidates": 10548,
+   "non_english": 223,
+   "v1_borderline": 35,
+   "heldout_overlap": 11,
+   "kept_pool": 10279
+  },
+  "theme_vanilla_harmful": {
+   "candidates": 3041,
+   "v1_borderline": 11,
+   "heldout_overlap": 6,
+   "kept_pool": 3024
+  },
+  "residual_pools": {
+   "chemistry/adversarial": 469,
+   "chemistry/vanilla": 12,
+   "chemistry/enriched": 146,
+   "exploit/adversarial": 2388,
+   "exploit/vanilla": 92,
+   "exploit/enriched": 30,
+   "revisionism/adversarial": 402,
+   "revisionism/vanilla": 141,
+   "revisionism/enriched": 32,
+   "stereotype/adversarial": 4937,
+   "stereotype/vanilla": 1356,
+   "stereotype/enriched": 40,
+   "blackmarket/adversarial": 2083,
+   "blackmarket/vanilla": 1423,
+   "blackmarket/enriched": 434
+  },
+  "residual_chemistry": {
+   "duplicate": 2,
+   "selected_enriched": 20,
+   "selected_vanilla": 12,
+   "selected_adversarial": 68
+  },
+  "residual_exploit": {
+   "selected_enriched": 20,
+   "selected_vanilla": 40,
+   "selected_adversarial": 40
+  },
+  "residual_revisionism": {
+   "duplicate": 1,
+   "selected_enriched": 20,
+   "selected_vanilla": 40,
+   "selected_adversarial": 40
+  },
+  "residual_stereotype": {
+   "selected_enriched": 20,
+   "selected_vanilla": 40,
+   "selected_adversarial": 40
+  },
+  "residual_blackmarket": {
+   "duplicate": 2,
+   "selected_enriched": 20,
+   "selected_vanilla": 40,
+   "selected_adversarial": 40
+  },
+  "twin_pool_vanilla_benign": {
+   "candidates": 50050,
+   "heldout_overlap": 118,
+   "v1_borderline": 201,
+   "non_english": 52,
+   "kept_pool": 49679
+  },
+  "twin_pool_adversarial_benign": {
+   "candidates": 24889,
+   "non_english": 506,
+   "v1_borderline": 57,
+   "heldout_overlap": 9,
+   "kept_pool": 24317
+  },
+  "twin_pool": {
+   "benign_suspect_dropped": 1979,
+   "kept_pool": 71012
+  },
+  "reference": {
+   "duplicate": 98,
+   "wjb_not_ordinary": 7660
+  },
+  "reference_fixed": {
+   "candidates": 252,
+   "heldout_overlap": 2,
+   "kept_pool": 250
+  }
+ },
+ "matching": {
+  "residual": {
+   "blackmarket": {
+    "cosine": {
+     "n": 100,
+     "p10": 0.127,
+     "median": 0.224,
+     "p90": 0.418,
+     "mean": 0.246
+    },
+    "twin_on_theme": 0.94,
+    "length_ratio": {
+     "n": 100,
+     "p10": 0.667,
+     "median": 0.812,
+     "p90": 1.278,
+     "mean": 0.877
+    }
+   },
+   "chemistry": {
+    "cosine": {
+     "n": 100,
+     "p10": 0.1,
+     "median": 0.145,
+     "p90": 0.277,
+     "mean": 0.166
+    },
+    "twin_on_theme": 0.73,
+    "length_ratio": {
+     "n": 100,
+     "p10": 0.667,
+     "median": 0.862,
+     "p90": 1.308,
+     "mean": 0.917
+    }
+   },
+   "exploit": {
+    "cosine": {
+     "n": 100,
+     "p10": 0.117,
+     "median": 0.211,
+     "p90": 0.371,
+     "mean": 0.228
+    },
+    "twin_on_theme": 0.88,
+    "length_ratio": {
+     "n": 100,
+     "p10": 0.632,
+     "median": 0.854,
+     "p90": 1.29,
+     "mean": 0.91
+    }
+   },
+   "revisionism": {
+    "cosine": {
+     "n": 100,
+     "p10": 0.12,
+     "median": 0.192,
+     "p90": 0.333,
+     "mean": 0.204
+    },
+    "twin_on_theme": 0.91,
+    "length_ratio": {
+     "n": 100,
+     "p10": 0.611,
+     "median": 0.74,
+     "p90": 1.205,
+     "mean": 0.825
+    }
+   },
+   "stereotype": {
+    "cosine": {
+     "n": 100,
+     "p10": 0.124,
+     "median": 0.222,
+     "p90": 0.355,
+     "mean": 0.225
+    },
+    "twin_on_theme": 0.55,
+    "length_ratio": {
+     "n": 100,
+     "p10": 0.652,
+     "median": 0.867,
+     "p90": 1.254,
+     "mean": 0.913
+    }
+   }
+  },
+  "enriched": {
+   "defensive": {
+    "cosine": {
+     "n": 227,
+     "p10": 0.119,
+     "median": 0.195,
+     "p90": 0.334,
+     "mean": 0.214
+    },
+    "twin_same_frame": 0.885,
+    "length_ratio": {
+     "n": 227,
+     "p10": 0.621,
+     "median": 0.72,
+     "p90": 0.952,
+     "mean": 0.757
+    }
+   },
+   "fiction": {
+    "cosine": {
+     "n": 250,
+     "p10": 0.109,
+     "median": 0.183,
+     "p90": 0.292,
+     "mean": 0.197
+    },
+    "twin_same_frame": 0.828,
+    "length_ratio": {
+     "n": 250,
+     "p10": 0.609,
+     "median": 0.696,
+     "p90": 0.938,
+     "mean": 0.744
+    }
+   },
+   "hypothetical": {
+    "cosine": {
+     "n": 250,
+     "p10": 0.164,
+     "median": 0.215,
+     "p90": 0.307,
+     "mean": 0.225
+    },
+    "twin_same_frame": 0.056,
+    "length_ratio": {
+     "n": 250,
+     "p10": 0.619,
+     "median": 0.7,
+     "p90": 0.958,
+     "mean": 0.756
+    }
+   },
+   "professional": {
+    "cosine": {
+     "n": 273,
+     "p10": 0.122,
+     "median": 0.207,
+     "p90": 0.322,
+     "mean": 0.217
+    },
+    "twin_same_frame": 0.571,
+    "length_ratio": {
+     "n": 273,
+     "p10": 0.611,
+     "median": 0.7,
+     "p90": 0.941,
+     "mean": 0.751
+    }
+   }
+  }
+ },
+ "heldout": [
+  "results/harmbench_standard/prompts.jsonl",
+  "results/xstest_safe/prompts.jsonl",
+  "data/evals/harmful.jsonl",
+  "data/evals/kl_prompts.jsonl",
+  "data/evals/mmlu_pro.jsonl",
+  "data/evals/cmmlu.jsonl",
+  "data/evals/ifeval.jsonl",
+  "data/evals/math500.jsonl",
+  "data/evals/bfcl.jsonl",
+  "data/refusal_v1/heldout_wjb_harmful.jsonl",
+  "data/refusal_v1/heldout_wjb_benign.jsonl",
+  "allenai/wildjailbreak eval (all rows)",
+  "mlabonne/harmful_behaviors test"
+ ],
+ "sources": {
+  "allenai/wildjailbreak": "5ddc12a7894f842b0619b8e1c7ee496b198af009 (train split only)",
+  "Bahushruth/abliteration-harmful-enriched": "f29c0b778d3412d5cc7acfc9c6463ce13886212c",
+  "heretic-org/Semantic-Harmful": "001ca2ceaef94a748235e0ba1366aee48436e286",
+  "mlabonne/harmful_behaviors": "01cead01398926d81f7c52bdb790ee8cf77ebba7 (held out / filter)",
+  "OBLITERATUS": "e414902a68553538df92c9d2a99478ce954f56e9:obliteratus/prompts.py (ast.literal_eval)",
+  "data/refusal_v1": "pairs_* included as-is; borderline_* excluded from new samples"
+ },
+ "licenses": {
+  "OBLITERATUS": "AGPL-3.0",
+  "heretic-org/Semantic-Harmful": "CC-BY-4.0",
+  "mlabonne/harmless_alpaca (Semantic twins)": "see source",
+  "Bahushruth/abliteration-harmful-enriched": "Apache-2.0",
+  "allenai/wildjailbreak": "ODC-BY (gated)"
+ },
+ "heldout_n": 7148,
+ "v1_pairs_dropped_heldout": [
+  "sem-0075"
+ ],
+ "reference_topics": {
+  "general": 1171,
+  "advice": 628,
+  "writing": 109,
+  "coding": 60,
+  "cooking": 29,
+  "math": 3
+ },
+ "params": {
+  "adv_max_words": 300,
+  "heldout_containment_max": 0.5,
+  "n_wjb_adversarial": 1000,
+  "n_wjb_vanilla": 500,
+  "n_residual_per_theme": 100,
+  "residual_quota": {
+   "enriched": 20,
+   "vanilla": 40
+  },
+  "n_enriched_per_frame": 250,
+  "n_reference": 2000,
+  "adv_benign_twin_pool": 20000,
+  "theme_bonus": 0.1,
+  "len_ratio": {
+   "vanilla": [
+    0.6,
+    1.67
+   ],
+   "adversarial": [
+    0.67,
+    1.5
+   ]
+  }
+ }
+}

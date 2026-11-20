@@ -1,0 +1,179 @@
+{
+ "seed": 0,
+ "files": {
+  "heldout_wjb_harmful": {
+   "n": 1834,
+   "file": "heldout_wjb_harmful.jsonl",
+   "bytes": 1458473,
+   "sha256": "6e9977afd490d3e31072a3b7d0d5d5e9712ef8ef8254db04db74a281b303c886",
+   "by_split": {
+    "adversarial_harmful": 1834
+   },
+   "words_median": 103,
+   "sources": [
+    "allenai/wildjailbreak@5ddc12a7894f842b0619b8e1c7ee496b198af009:eval"
+   ],
+   "note": "never use for direction finding"
+  },
+  "heldout_wjb_benign": {
+   "n": 205,
+   "file": "heldout_wjb_benign.jsonl",
+   "bytes": 218283,
+   "sha256": "cf18c0f5b0fedbc41553bbc44ed927fb0fc3d9e975f9439508175c841b100194",
+   "by_split": {
+    "adversarial_benign": 205
+   },
+   "words_median": 129,
+   "sources": [
+    "allenai/wildjailbreak@5ddc12a7894f842b0619b8e1c7ee496b198af009:eval"
+   ],
+   "note": "never use for direction finding"
+  },
+  "pairs_harmful": {
+   "n": 1061,
+   "file": "pairs_harmful.jsonl",
+   "bytes": 204300,
+   "sha256": "e690424190d689a6c8959c0cc2b6865f512e832eb4cb048ca87b09f363f7f0dd",
+   "by_split": {
+    "obliteratus": 840,
+    "semantic": 221
+   },
+   "words_median": 11,
+   "sources": [
+    "OBLITERATUS@e414902a68553538df92c9d2a99478ce954f56e9:obliteratus/prompts.py",
+    "heretic-org/Semantic-Harmful@001ca2ceaef94a748235e0ba1366aee48436e286:metadata/matched_pairs.json"
+   ]
+  },
+  "pairs_harmless": {
+   "n": 1061,
+   "file": "pairs_harmless.jsonl",
+   "bytes": 202114,
+   "sha256": "47f9315fec41b6040b558d805e142eff9d7b02819652a70e3cbdbf321fa88955",
+   "by_split": {
+    "obliteratus": 840,
+    "semantic": 221
+   },
+   "words_median": 11,
+   "sources": [
+    "OBLITERATUS@e414902a68553538df92c9d2a99478ce954f56e9:obliteratus/prompts.py",
+    "heretic-org/Semantic-Harmful@001ca2ceaef94a748235e0ba1366aee48436e286:metadata/matched_pairs.json"
+   ]
+  },
+  "borderline_harmful": {
+   "n": 600,
+   "file": "borderline_harmful.jsonl",
+   "bytes": 275432,
+   "sha256": "2d8251500de870c776c9ef9382d4bd3a018eaf0a6547eb65f834465689ea852b",
+   "by_split": {
+    "enriched_defensive": 50,
+    "enriched_fiction": 50,
+    "enriched_hypothetical": 50,
+    "enriched_professional": 50,
+    "wjb_adversarial_harmful": 200,
+    "wjb_vanilla_harmful": 200
+   },
+   "words_median": 23,
+   "sources": [
+    "allenai/wildjailbreak@5ddc12a7894f842b0619b8e1c7ee496b198af009:train",
+    "Bahushruth/abliteration-harmful-enriched@f29c0b778d3412d5cc7acfc9c6463ce13886212c"
+   ],
+   "note": "run with --samples 4; label by judge; contrast within kind"
+  },
+  "borderline_harmless": {
+   "n": 400,
+   "file": "borderline_harmless.jsonl",
+   "bytes": 230376,
+   "sha256": "9d9c3813c8c2ba80418d7ff0e3fa51753d436093f251930a228005f78bb04e56",
+   "by_split": {
+    "wjb_adversarial_benign": 200,
+    "wjb_vanilla_benign": 200
+   },
+   "words_median": 69,
+   "sources": [
+    "allenai/wildjailbreak@5ddc12a7894f842b0619b8e1c7ee496b198af009:train"
+   ],
+   "note": "run with --samples 4; label by judge; contrast within kind"
+  }
+ },
+ "filters": {
+  "heldout_wjb_harmful": {
+   "candidates": 2000,
+   "heldout_overlap": 118,
+   "non_english": 48,
+   "kept_pool": 1834
+  },
+  "heldout_wjb_benign": {
+   "candidates": 210,
+   "non_english": 5,
+   "kept_pool": 205
+  },
+  "semantic_pairs": {
+   "below_min_score": 153
+  },
+  "pairs": {
+   "candidates": 1105,
+   "heldout_overlap": 42,
+   "non_english": 1,
+   "duplicate": 1,
+   "kept": 1061
+  },
+  "wjb_vanilla_harmful": {
+   "candidates": 20000,
+   "heldout_overlap": 27,
+   "non_english": 41,
+   "kept_pool": 19932
+  },
+  "wjb_vanilla_benign": {
+   "candidates": 20000,
+   "heldout_overlap": 50,
+   "non_english": 25,
+   "duplicate": 33,
+   "kept_pool": 19892
+  },
+  "wjb_adversarial_harmful": {
+   "candidates": 20000,
+   "non_english": 536,
+   "heldout_overlap": 12,
+   "kept_pool": 19452
+  },
+  "wjb_adversarial_benign": {
+   "candidates": 20000,
+   "non_english": 413,
+   "heldout_overlap": 7,
+   "duplicate": 6,
+   "kept_pool": 19574
+  },
+  "enriched": {
+   "mlabonne_original": 520,
+   "no_frame": 3514,
+   "jailbreak_style": 32,
+   "candidates": 3290,
+   "heldout_overlap": 3,
+   "non_english": 55,
+   "duplicate": 4,
+   "kept_pool": 3228
+  }
+ },
+ "heldout": [
+  "results/harmbench_standard/prompts.jsonl",
+  "results/xstest_safe/prompts.jsonl",
+  "data/evals/harmful.jsonl",
+  "data/evals/kl_prompts.jsonl",
+  "allenai/wildjailbreak eval"
+ ],
+ "licenses": {
+  "OBLITERATUS": "AGPL-3.0",
+  "heretic-org/Semantic-Harmful": "CC-BY-4.0",
+  "mlabonne/harmless_alpaca (Semantic twins)": "see source",
+  "Bahushruth/abliteration-harmful-enriched": "Apache-2.0",
+  "allenai/wildjailbreak": "ODC-BY (gated)"
+ },
+ "params": {
+  "semantic_min_score": 0.7,
+  "adv_max_words": 300,
+  "heldout_containment_max": 0.5,
+  "n_vanilla": 200,
+  "n_adversarial": 200,
+  "n_enriched_per_frame": 50
+ }
+}

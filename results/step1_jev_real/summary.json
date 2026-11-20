@@ -1,0 +1,47 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "judge": "typesafe/jev-1.14 via OpenRouter decisions",
+  "chunks": 1020,
+  "errors": 0,
+  "flagged": 382,
+  "latency_p50_s": 0.2755890660919249,
+  "latency_p95_s": 0.8203434431925416,
+  "cost": 0.031913658,
+  "per_split": {
+    "censored": {
+      "responses": 95,
+      "responses_flagged": 83,
+      "chunks": 680,
+      "chunks_flagged": 347,
+      "labels": {
+        "factual": 373,
+        "evasive": 140,
+        "party_line": 163,
+        "refusal": 2,
+        "off_topic": 2
+      },
+      "first_chunk_labels": {
+        "factual": 29,
+        "evasive": 38,
+        "party_line": 26,
+        "refusal": 2
+      }
+    },
+    "uncensored": {
+      "responses": 37,
+      "responses_flagged": 18,
+      "chunks": 340,
+      "chunks_flagged": 35,
+      "labels": {
+        "factual": 310,
+        "evasive": 22,
+        "party_line": 8
+      },
+      "first_chunk_labels": {
+        "factual": 27,
+        "evasive": 9,
+        "party_line": 1
+      }
+    }
+  }
+}

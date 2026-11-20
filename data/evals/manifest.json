@@ -1,0 +1,83 @@
+{
+ "kl_prompts": {
+  "n": 200,
+  "file": "kl_prompts.jsonl",
+  "bytes": 19846,
+  "sha256": "492ab9695c8ab28be02f8bf2c35d80a9f43c1d4bdae682127a9fc4ac3ccdf8a0",
+  "sources": [
+   "mlabonne/harmless_alpaca@02c6a92cfcf11bb0c387334f8146d149d65b587f",
+   "shibing624/alpaca-zh@f39db019a94f8dbea48ab30d2bdc090703284559"
+  ],
+  "seed": 0
+ },
+ "harmful": {
+  "n": 104,
+  "file": "harmful.jsonl",
+  "bytes": 12195,
+  "sha256": "a1209e58f6bfceb6f5be39ff467cd050704c692df4db76843fcb847b8446d1ca",
+  "sources": [
+   "mlabonne/harmful_behaviors@01cead01398926d81f7c52bdb790ee8cf77ebba7"
+  ],
+  "seed": 0
+ },
+ "mmlu_pro": {
+  "n": 500,
+  "file": "mmlu_pro.jsonl",
+  "bytes": 390673,
+  "sha256": "5cb83d47cb4179b5d29e04f3d778983d5f3e53a083dc71bdc6bed0f9d96e6e2b",
+  "sources": [
+   "TIGER-Lab/MMLU-Pro@b189ec765aa7ed75c8acfea42df31fdae71f97be"
+  ],
+  "seed": 0
+ },
+ "math500": {
+  "n": 500,
+  "file": "math500.jsonl",
+  "bytes": 164285,
+  "sha256": "248b1f59777ab8787fdf2ef4a0598e07f2f2ab6986e4449a7392c00615e9f5b8",
+  "sources": [
+   "HuggingFaceH4/MATH-500@6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be"
+  ],
+  "seed": 0
+ },
+ "ifeval": {
+  "n": 541,
+  "file": "ifeval.jsonl",
+  "bytes": 225848,
+  "sha256": "109e6bfcde4c10a099f17a58484de9602e0e79a2734624bd58f67e9433d75d69",
+  "sources": [
+   "google/IFEval@966cd89545d6b6acfd7638bc708b98261ca58e84"
+  ],
+  "seed": 0
+ },
+ "livecodebench": {
+  "n": 112,
+  "file": "livecodebench.jsonl",
+  "bytes": 140531923,
+  "sha256": "872957ad72c1f6fac052af1583a5d0cfde641dc0255c207c60a5226dcbfae474",
+  "sources": [
+   "livecodebench/code_generation_lite/test6.jsonl@0fe84c3912ea0c4d4a78037083943e8f0c4dd505"
+  ],
+  "seed": 0
+ },
+ "cmmlu": {
+  "n": 500,
+  "file": "cmmlu.jsonl",
+  "bytes": 169761,
+  "sha256": "f9570d448bf9d6ad1a16666aa10fc0f62cc62bbbedee10a2797327f04e94a3bd",
+  "sources": [
+   "haonan-li/cmmlu@efcc940752ea4a1ea94d2727f11f83858d64fc8e"
+  ],
+  "seed": 0
+ },
+ "bfcl": {
+  "n": 50,
+  "file": "bfcl.jsonl",
+  "bytes": 62621,
+  "sha256": "08a91b089c27ca0081e60d539c83c710661f264149e02bb336bf4b2ef3203c97",
+  "sources": [
+   "gorilla-llm/Berkeley-Function-Calling-Leaderboard@61fc0608cfd831fcfbbaa676ebdfef0ed963eeda"
+  ],
+  "seed": 0
+ }
+}

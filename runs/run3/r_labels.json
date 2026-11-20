@@ -1,0 +1,36 @@
+{
+ "out": "/vol/session_r3/r_labels",
+ "sets": [
+  {
+   "tag": "rb",
+   "file": "data/refusal_v3/build_harmful.jsonl",
+   "split": "harmful"
+  }
+ ],
+ "tiers": {},
+ "temperature": 0.0,
+ "effort": "low",
+ "kl_n": 200,
+ "kl_max_tokens": 1024,
+ "steps": [
+  {
+   "kind": "edit",
+   "name": "r_labels",
+   "components": [
+    {
+     "bank": "/vol/banks/r3_h3.pt",
+     "family": "h3/6:1",
+     "variant": "pc4"
+    }
+   ],
+   "layers": [
+    48,
+    84
+   ],
+   "lam": 1.5,
+   "thinking": true,
+   "effort": "low",
+   "max_tokens": 512
+  }
+ ]
+}

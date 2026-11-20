@@ -1,0 +1,12 @@
+tools/.known_hosts
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+out/
+uv.lock.bak
+.DS_Store
+.env
+.env.*
+data/evals/livecodebench.jsonl
+.modal_gpu_sb

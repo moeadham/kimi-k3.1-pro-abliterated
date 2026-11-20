@@ -1,0 +1,41 @@
+{
+ "out": "/vol/session_r3/pe_r",
+ "effort": "low",
+ "k": 6,
+ "streams": [
+  72,
+  187
+ ],
+ "edit": {
+  "name": "H_pc4_l1.5",
+  "components": [
+   {
+    "bank": "/vol/banks/r3_h3.pt",
+    "family": "h3/6:1",
+    "variant": "pc4"
+   }
+  ],
+  "layers": [
+   48,
+   84
+  ],
+  "lam": 1.5
+ },
+ "labels_from": "/vol/session_r3/r_labels/gens/r_labels.jsonl",
+ "ref_sets": [
+  "reference"
+ ],
+ "sets": [
+  {
+   "tag": "rb",
+   "file": "data/refusal_v3/build_harmful.jsonl",
+   "split": "harmful"
+  },
+  {
+   "tag": "reference",
+   "file": "data/refusal_v3/reference_alpaca.jsonl",
+   "split": "harmless",
+   "n": 1000
+  }
+ ]
+}

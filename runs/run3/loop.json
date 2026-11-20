@@ -1,0 +1,30 @@
+{
+ "out": "/vol/session_r3/loop",
+ "max_tokens": 16384,
+ "n": {
+  "math500": 12,
+  "ifeval": 8
+ },
+ "conditions": [
+  {
+   "name": "unedited"
+  },
+  {
+   "name": "H_pc4_l1.5",
+   "edit": {
+    "components": [
+     {
+      "bank": "/vol/banks/r3_h3.pt",
+      "family": "h3/6:1",
+      "variant": "pc4"
+     }
+    ],
+    "layers": [
+     48,
+     84
+    ],
+    "lam": 1.5
+   }
+  }
+ ]
+}

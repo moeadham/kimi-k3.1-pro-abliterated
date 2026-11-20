@@ -1,0 +1,89 @@
+{
+ "model": "moonshotai/kimi-k3.1-pro",
+ "provider": "wafer/us",
+ "effort": "low",
+ "temperature": 1.0,
+ "top_p": 0.95,
+ "max_tokens": 16000,
+ "concurrency": 32,
+ "wall_s": 181,
+ "date": "2026-11-18",
+ "total_cost": 2.3122439139999984,
+ "sets": {
+  "mmlu_pro": {
+   "n": 100,
+   "errors": 0,
+   "accuracy": 0.92,
+   "mean_output_tokens": 525.5,
+   "cost": 0.4695033600000001,
+   "latency_median_s": 2.8499999999999996,
+   "latency_max_s": 65.0,
+   "health": {
+    "hit_max_tokens": 0.0,
+    "empty_answer": 0.0,
+    "repetition": 0.06377096678038713,
+    "off_language": 0.0
+   }
+  },
+  "cmmlu": {
+   "n": 50,
+   "errors": 0,
+   "accuracy": 0.98,
+   "mean_output_tokens": 321.58,
+   "cost": 0.14345854999999996,
+   "latency_median_s": 3.3,
+   "latency_max_s": 27.8,
+   "health": {
+    "hit_max_tokens": 0.0,
+    "empty_answer": 0.0,
+    "repetition": 0.07460061571039092,
+    "off_language": 0.08539638595736138
+   }
+  },
+  "ifeval": {
+   "n": 100,
+   "errors": 0,
+   "accuracy": 0.89,
+   "mean_output_tokens": 1390.93,
+   "cost": 1.2268744050000007,
+   "latency_median_s": 9.9,
+   "latency_max_s": 154.0,
+   "health": {
+    "hit_max_tokens": 0.0,
+    "empty_answer": 0.0,
+    "repetition": 0.14251551825080866,
+    "off_language": 0.0001253538212697129
+   }
+  },
+  "math500": {
+   "n": 50,
+   "errors": 0,
+   "accuracy": 0.98,
+   "mean_output_tokens": 873.38,
+   "cost": 0.386401052,
+   "latency_median_s": 4.5,
+   "latency_max_s": 48.2,
+   "health": {
+    "hit_max_tokens": 0.0,
+    "empty_answer": 0.0,
+    "repetition": 0.10342240672902171,
+    "off_language": 0.0
+   }
+  },
+  "bfcl": {
+   "n": 50,
+   "errors": 0,
+   "accuracy": 0.88,
+   "mean_output_tokens": 186.04,
+   "cost": 0.08600654699999999,
+   "latency_median_s": 1.6,
+   "latency_max_s": 7.4,
+   "health": {
+    "hit_max_tokens": 0.0,
+    "empty_answer": 0.0,
+    "repetition": 0.010219059728272141,
+    "off_language": 0.0
+   }
+  }
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "cap": 512,
+ "n": 1615,
+ "cases": {
+  "fits": 111,
+  "answer_cut": 110,
+  "reasoning_cut": 1394
+ },
+ "all": {
+  "n": 1615,
+  "agree": 0.9666,
+  "refused_true": 576,
+  "refused_missed": 18,
+  "answered_true": 985,
+  "answered_false_flag": 36,
+  "truth_refusal_rate": 0.3678,
+  "pred_refusal_rate": 0.3789
+ },
+ "cut_only": {
+  "n": 1504,
+  "agree": 0.9641,
+  "refused_true": 488,
+  "refused_missed": 18,
+  "answered_true": 962,
+  "answered_false_flag": 36,
+  "truth_refusal_rate": 0.3364,
+  "pred_refusal_rate": 0.3484
+ },
+ "reasoning_cut": {
+  "n": 1394,
+  "agree": 0.9648,
+  "refused_true": 426,
+  "refused_missed": 18,
+  "answered_true": 919,
+  "answered_false_flag": 31,
+  "truth_refusal_rate": 0.3185,
+  "pred_refusal_rate": 0.3278
+ },
+ "answer_cut": {
+  "n": 110,
+  "agree": 0.9545,
+  "refused_true": 62,
+  "refused_missed": 0,
+  "answered_true": 43,
+  "answered_false_flag": 5,
+  "truth_refusal_rate": 0.5636,
+  "pred_refusal_rate": 0.6091
+ },
+ "deflection_truth": {
+  "n": 67,
+  "agree": 0.7761,
+  "refused_true": 48,
+  "refused_missed": 13,
+  "answered_true": 4,
+  "answered_false_flag": 2,
+  "truth_refusal_rate": 0.9104,
+  "pred_refusal_rate": 0.7463
+ },
+ "src:base_think": {
+  "n": 100,
+  "agree": 1.0,
+  "refused_true": 50,
+  "refused_missed": 0,
+  "answered_true": 50,
+  "answered_false_flag": 0,
+  "truth_refusal_rate": 0.5,
+  "pred_refusal_rate": 0.5
+ },
+ "src:big_base_think": {
+  "n": 190,
+  "agree": 0.9632,
+  "refused_true": 105,
+  "refused_missed": 3,
+  "answered_true": 78,
+  "answered_false_flag": 4,
+  "truth_refusal_rate": 0.5684,
+  "pred_refusal_rate": 0.5737
+ },
+ "src:gens": {
+  "n": 995,
+  "agree": 0.9698,
+  "refused_true": 403,
+  "refused_missed": 7,
+  "answered_true": 562,
+  "answered_false_flag": 23,
+  "truth_refusal_rate": 0.4121,
+  "pred_refusal_rate": 0.4281
+ },
+ "src:r3_think_decp_harmp_lam1.5_40_92_4k": {
+  "n": 82,
+  "agree": 0.9268,
+  "refused_true": 3,
+  "refused_missed": 5,
+  "answered_true": 73,
+  "answered_false_flag": 1,
+  "truth_refusal_rate": 0.0976,
+  "pred_refusal_rate": 0.0488
+ },
+ "src:r5_think_decp_harmp_lam1_48_84_4k": {
+  "n": 120,
+  "agree": 0.9583,
+  "refused_true": 6,
+  "refused_missed": 1,
+  "answered_true": 109,
+  "answered_false_flag": 4,
+  "truth_refusal_rate": 0.0583,
+  "pred_refusal_rate": 0.0833
+ },
+ "src:r7_think_harmp_only_lam1_52_76_4k": {
+  "n": 128,
+  "agree": 0.9531,
+  "refused_true": 9,
+  "refused_missed": 2,
+  "answered_true": 113,
+  "answered_false_flag": 4,
+  "truth_refusal_rate": 0.0859,
+  "pred_refusal_rate": 0.1016
+ }
+}

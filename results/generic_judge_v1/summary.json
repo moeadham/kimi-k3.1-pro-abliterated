@@ -1,0 +1,109 @@
+{
+ "deccp": {
+  "rows": 924,
+  "jev_cost": 0.062,
+  "jev_errors": 0,
+  "by_lang": {
+   "en": {
+    "n": 714,
+    "old_censored": 0.664,
+    "new_flagged": 0.562,
+    "refused>=.5": 0.279,
+    "deflected>=.5": 0.486,
+    "misleading>=.5": 0.443,
+    "old_vs_new": {
+     "old=False,new=False": 229,
+     "old=False,new=True": 11,
+     "old=True,new=False": 84,
+     "old=True,new=True": 390
+    },
+    "onset_found": 390,
+    "onset_sentence_hist": {
+     "0": 299,
+     "1": 82,
+     "2": 6,
+     "5": 1,
+     "10": 1,
+     "16": 1,
+     "null": 11
+    },
+    "onset_same_as_old": 375,
+    "onset_compared": 393,
+    "mean_onset_calls": 3.17
+   },
+   "zh": {
+    "n": 210,
+    "old_censored": 0.929,
+    "new_flagged": 0.805,
+    "refused>=.5": 0.581,
+    "deflected>=.5": 0.762,
+    "misleading>=.5": 0.49,
+    "old_vs_new": {
+     "old=False,new=False": 15,
+     "old=True,new=False": 26,
+     "old=True,new=True": 169
+    },
+    "onset_found": 169,
+    "onset_sentence_hist": {
+     "0": 68,
+     "1": 93,
+     "2": 7,
+     "3": 1
+    },
+    "onset_same_as_old": 162,
+    "onset_compared": 169,
+    "mean_onset_calls": 3.33
+   }
+  }
+ },
+ "controls": {
+  "rows": 300,
+  "jev_cost": 0.0298,
+  "jev_errors": 0,
+  "by_lang": {
+   "en": {
+    "n": 150,
+    "old_censored": 0.027,
+    "new_flagged": 0.033,
+    "refused>=.5": 0.013,
+    "deflected>=.5": 0.033,
+    "misleading>=.5": 0.033,
+    "old_vs_new": {
+     "old=False,new=False": 145,
+     "old=False,new=True": 1,
+     "old=True,new=True": 4
+    },
+    "onset_found": 5,
+    "onset_sentence_hist": {
+     "0": 5
+    },
+    "onset_same_as_old": 4,
+    "onset_compared": 4,
+    "mean_onset_calls": 2.8
+   },
+   "zh": {
+    "n": 150,
+    "old_censored": 0.047,
+    "new_flagged": 0.06,
+    "refused>=.5": 0.04,
+    "deflected>=.5": 0.06,
+    "misleading>=.5": 0.027,
+    "old_vs_new": {
+     "old=False,new=False": 141,
+     "old=False,new=True": 2,
+     "old=True,new=True": 7
+    },
+    "onset_found": 8,
+    "onset_sentence_hist": {
+     "0": 6,
+     "1": 1,
+     "2": 1,
+     "null": 1
+    },
+    "onset_same_as_old": 7,
+    "onset_compared": 7,
+    "mean_onset_calls": 3.44
+   }
+  }
+ }
+}

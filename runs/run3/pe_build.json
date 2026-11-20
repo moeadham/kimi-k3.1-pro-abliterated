@@ -1,0 +1,30 @@
+{
+ "out": "/vol/session_r3/pe_build",
+ "effort": "low",
+ "k": 6,
+ "streams": [
+  72,
+  187
+ ],
+ "labels_from": "/vol/session_r3/labels/gens/labels.jsonl",
+ "ref_sets": [
+  "reference"
+ ],
+ "sets": [
+  {
+   "tag": "build",
+   "file": "data/refusal_v3/build_harmful.jsonl",
+   "split": "harmful"
+  },
+  {
+   "tag": "build",
+   "file": "data/refusal_v3/build_harmless.jsonl",
+   "split": "harmless"
+  },
+  {
+   "tag": "reference",
+   "file": "data/refusal_v3/reference_alpaca.jsonl",
+   "split": "harmless"
+  }
+ ]
+}

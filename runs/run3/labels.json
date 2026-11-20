@@ -1,0 +1,29 @@
+{
+ "out": "/vol/session_r3/labels",
+ "sets": [
+  {
+   "tag": "build",
+   "file": "data/refusal_v3/build_harmful.jsonl",
+   "split": "harmful"
+  },
+  {
+   "tag": "build",
+   "file": "data/refusal_v3/build_harmless.jsonl",
+   "split": "harmless"
+  }
+ ],
+ "tiers": {},
+ "temperature": 0.0,
+ "effort": "low",
+ "kl_n": 200,
+ "kl_max_tokens": 1024,
+ "steps": [
+  {
+   "kind": "baseline",
+   "name": "labels",
+   "thinking": true,
+   "effort": "low",
+   "max_tokens": 512
+  }
+ ]
+}
